@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rockwell', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Showcard Gothic', 'Elephant';
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+section {
+    text-align: center;
+}
+
+section h2 {
+    padding: 15px;
+}
+
+section a {
+    text-decoration: none;
+}
+
+.section-container {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #7D0093;
+    color: #ffc600;
+}
+
+main > a {
+    align-self: center;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: #001768;
+    color: #FFC600;
+    padding: 5px 20px;
+    margin: 20px;
+}
+
+main > a:hover {
+    background-color: #FFC600;
+    color: #001768;
+}
+
+.en-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    margin: 15px 0;
+    background-color: #001768;
+}
+
+.en-container p {
+    padding: 8px 0;
+}
+
+.section-container.en > h2 {
+    padding-top: 15px;
+}
+
+.s-container {
+    width: 700px;
+    padding: 40px;
+    background-color: #001768; 
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+
+.s-container > h2 {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.s-container > p {
+    font-size: 25px;
+}
+
+/*********NAV***********/
+nav {
+    padding: 2px 5px;
+    background-color: #FFC600;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 26px;
+}
+
+nav ul > li > a {
+    color: #000000;
+}
+
+nav ul > li > a:hover {
+    background-color: #001768;
+    color: #FFC600;
+}
+
+
+nav a {
+    text-decoration: none;
+}
+/*********NAV***********/
+
+/*********LOGO***********/
+
+#logo-area img {
+    width: 250px;
+}
+
+#logo-area {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/Galeria/balada5.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    padding: 15px;
+}
+/*********LOGO***********/
+
+/*********EVENTOS***********/
+
+#eventos .section-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+#eventos .section-container ol li {
+    display: flex;
+    list-style: none;
+    padding: 8px 0;
+}
+
+#eventos .section-container a {
+    align-self: flex-end;
+    color: #FFC600;
+    padding: 8px 15px;
+    font-size: 20px;
+}
+
+#eventos a:hover {
+    color: #000000;
+}
+/*********EVENTOS***********/
+
+/*********NOTICIAS***********/
+
+#noticias .section-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+#noticias .section-container ol li {
+    display: flex;
+    list-style: none;
+    padding: 8px 0;
+}
+
+#noticias .section-container a {
+    align-self: flex-end;
+    color: #FFC600;
+    padding: 8px 15px;
+    font-size: 20px;
+}
+
+#noticias a:hover {
+    color: #000000;
+}
+
+/*********NOTICIAS***********/
+
+/*********SERVIÇOS***********/
+
+#serviços .section-container {
+    display: flex;
+    justify-content: center;
+}
+
+#serviços .section-container ul {
+    height: 120px;
+    width: 70%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+    align-content: space-between;
+    list-style-type: none;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+#serviços .section-container ul li {
+    padding: 8px 0;
+}
+
+#serviços a {
+    color: #FFC600;
+}
+
+#serviços a:hover {
+    color: #000000;
+}
+/*********SERVIÇOS***********/
+
+footer {
+    background-color: #3a3a3a;
+    text-align: center;
+    font-size: 15px;
+    color: #FFC600;
+    padding: 10px;
+}
+
+footer > .section-container > a {
+    padding: 5px;
+    text-decoration: none;
+    color: #001768;
+    background-color: #ffc600;
+}
+
+footer a:hover {
+    color: #FFC600;
+    background-color: #001768;
+}
+
+address {
+    font-style: normal;
+    padding-bottom: 10px;
+}
+
+#redes-sociais {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px 0px 15px;
+}
+
+@media (max-width: 790px) {
+
+    .s-container {
+        width: 90%;
+    }
+
+    #serviços .section-container ul {
+        height: 100%;
+        align-content: center;
+    }
+
+    
+    nav ul{
+        display: flex;
+        justify-content: flex-start;
+        padding: 7px 7px;
+    }
+    
+    nav #bt-mobile-menu {
+        display: flex;
+    }
+    
+    nav .bt-common-menu {
+        display: none;
+        padding: 5px 0;
+    }
+    
+    nav .bt-common-menu.active {
+        display: block;
+    }
+    
+    nav ul.mobile-mode {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    main > a {
+        font-size: 23px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    main > a {
+        font-size: 20px;
+    }
+
+}

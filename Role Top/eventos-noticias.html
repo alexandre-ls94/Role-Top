@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Role Top </title>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/secondary-pages.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="flex-container">
+    <header>
+        <nav>
+            <div class="section-container">
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <!-- HTML para colocar os ícones do FA -->
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active"> Home </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="sobre.html"> Sobre </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="eventos-noticias.html"> Eventos </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="galeria.html"> Galeria </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="eventos-noticias.html#notícias"> Notícias </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="servicos.html"> Serviços </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="fale-conosco.html"> Fale Conosco </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html"> Login </a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1> Role Top </h1>
+    </header>
+
+    <main class="section-container en">
+        <h2> Eventos </h2>
+        <div class="en-container">
+            <p>16/08 - Sextanejo - das 21 horas as 03 horas</p>
+            <p>17/08 - White Party (Balada eletrônica) - das 21 horas as 04 horas</p>
+            <p>18/08 - Casamento - Antônio e Florisbela - Evento fechado</p>
+            <p>22/08 - Apresentação - Empresa Lux - Evento fechado</p>
+            <p>23/08 - Sextanejo - das 21 horas as 03 horas</p>
+            <p>24/08 - Casamento - Joaquim e Aurora - Evento fechado</p>
+        </div>
+
+        <h2> Notícias </h2>
+        <div class="en-container">
+            <p>VENHAM TODOS DE BRANCO !!! A White Party convoca os baladeiros !</p>
+            <p>Fotos do Sextanejo - 09/08</p>
+            <p>Fotos - Anime Show - 06/08</p>
+            <p>Em breve - Circuito Hip Hop</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="section-container">
+            <address>
+                Av. Barão de Limeira, 135 - Santa Cecília - São Paulo - Sp
+                <br />
+                (11) 1234 5678 / (11) 9876 5432
+                <br />
+                roletop@email.com
+            </address>
+            <a href="#"> Voltar ao topo!</a>
+            <div id="redes-sociais">
+                <a href="https://www.facebook.com/"><img src="img/Facebook.png"></a>
+                <a href="https://www.instagram.com/"><img src="img/Instagram.png"></a>
+                <a href="https://twitter.com/"><img src="img/Twitter.png"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-times");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }                
+    </script>
+
+</body>
+
+</html>

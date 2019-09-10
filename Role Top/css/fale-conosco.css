@@ -1,0 +1,82 @@
+main {
+    font-size: 20px;
+    padding: 15px;
+}
+
+h2 {
+    padding: 10px 0;
+}
+
+#mapa {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 15px;
+}
+
+#mapa address {
+    padding-right: 8px;
+}
+
+#solicitaçao {
+    align-self: center;
+    width: 500px;
+    padding: 10px 0;
+    padding-bottom: 
+}
+
+#solicitaçao div {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 5px 0;
+}
+
+#solicitaçao input[type="submit"] {
+    width: 100px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #001768;
+    color: #FFC600;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#solicitaçao input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+
+#perguntas {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+    padding: 15px 15px;
+}
+
+#perguntas p, strong {
+    padding: 8px 0;
+}
+
+#perguntas strong {
+    font-size: 23px;
+    color: #001768;
+}
+
+@media (max-width: 600px) {
+    #mapa {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mapa iframe {
+        width: 100%;
+    }
+
+    #solicitaçao {
+        width: 100%;
+    }
+}

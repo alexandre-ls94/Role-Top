@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #7D0093;
+    text-align: center;
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

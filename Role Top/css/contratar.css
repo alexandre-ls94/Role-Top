@@ -1,0 +1,90 @@
+main {
+    color: #FFC600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#dados div input {
+    width: 100%;
+}
+
+#dados div {
+    text-align: start;
+}
+
+#pagamento div input {
+    width: 100%;
+}
+
+#pagamento div {
+    text-align: start;
+}
+
+#pagamento h3 {
+    font-size: 23px;
+    padding: 5px;
+}
+
+.serviços {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form section div {
+    padding: 2px;
+}
+
+form input {
+    margin-top: 3px;
+}
+
+label {
+    font-size: 15px;
+}
+
+form input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #001768;
+    color: #FFC600;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #FFC600;
+    color: #001768;
+}
+
+@media (max-width: 850px) {
+    main {
+        margin: 40px 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        padding-bottom: 10px;
+    }
+
+    #pagamento h3 {
+        padding: 10px 0;
+    }
+}

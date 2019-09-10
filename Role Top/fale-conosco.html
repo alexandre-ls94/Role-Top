@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Role Top </title>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/secondary-pages.css" rel="stylesheet" type="text/css">
+    <link href="css/fale-conosco.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="flex-container">
+    <header>
+        <nav>
+            <div class="section-container">
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <!-- HTML para colocar os ícones do FA -->
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active"> Home</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="sobre.html"> Sobre </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="eventos-noticias.html"> Eventos</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="galeria.html"> Galeria </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="eventos-noticias.html#Notícias">Notícias </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="servicos.html"> Serviços </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="fale-conosco.html"> Fale Conosco </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html"> Login </a></li>
+                </ul>
+            </div>
+            <h1> Role Top </h1>
+        </nav>
+    </header>
+    <main>
+        <h2> Contatos </h2>
+        <div id="mapa">
+            <address>
+                Av. Barão de Limeira, 135 - Santa Cecília - São Paulo - Sp
+                <br />
+                (11) 1234 5678 / (11) 9876 5432
+                <br />
+                roletop@email.com
+            </address>
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8871329131093!2d-46.64847708440743!3d-23.536561566563428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x124f377d06c7e71f!2sAlameda%20Bar%C3%A3o%20de%20Limeira%2C%20539%20-%20Campos%20El%C3%ADseos%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001202-001!5e0!3m2!1spt-BR!2sbr!4v1568113574705!5m2!1spt-BR!2sbr" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    
+        <h2> Solicitação de Visitas </h2>
+
+        <div id="solicitaçao">
+            <form method="GET" action="#">
+                <div>
+                    <label for="nome"> Nome Completo </label>
+                    <input id="nome" type="text"/>
+                </div>
+                
+                <div>
+                    <label for="telefone"> Telefone </label>
+                    <input id="telefone" type="text"/>
+                </div>
+
+                <div>
+                    <label for="email"> E-mail </label>
+                    <input id="email" type="text"/>
+                </div>
+                    
+                <div>
+                    <label for="data"> Data e Hora </label>
+                    <input id="data" type="datetime-local"/>
+                </div>
+
+                <input type="submit" value="Enviar"/>                
+            </form>
+        </div>
+
+        <a href="contrate-nos.html"> AGENDE AQUI SEU EVENTO !</a>
+
+
+        <h2> Perguntas Frequentes </h2>
+
+        <div class="section-container">
+            <div id="perguntas">
+                <strong>Onde estaciono meu veículo ?</strong>
+                <p>Somos conveniados ao estacionamento Carpark, que tem um amplo espaço dedicado a seu veículo.</p>
+                <strong>Sou deficiente, tenho acesso livre ?</strong>
+                <p>O local está preparado para receber deficientes visuais e físicos, com rampas de acesso e piso tátil.</p>
+                <strong>É permitido a entrada de menores de idade ?</strong>
+                <p>O local recebe vários tipos de eventos, por isso é recomendável que seja verificado a faixa etária de acordo com o evento.</p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="section-container">
+            <address>
+                Av. Barão de Limeira, 135 - Santa Cecília - São Paulo - Sp
+                <br />
+                (11) 1234 5678 / (11) 9876 5432
+                <br />
+                roletop@email.com
+            </address>
+            <a href="#"> Voltar ao topo!</a>
+            <div id="redes-sociais">
+                <a href="https://www.facebook.com/"><img src="img/Facebook.png"></a>
+                <a href="https://www.instagram.com/"><img src="img/Instagram.png"></a>
+                <a href="https://twitter.com/"><img src="img/Twitter.png"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-times");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }                
+    </script>
+</body>
+
+</html>
