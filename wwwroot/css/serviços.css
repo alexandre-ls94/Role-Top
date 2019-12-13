@@ -1,0 +1,57 @@
+h2 {
+    padding-bottom: 20px;
+}
+
+#serv-section {
+    width: 70%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#serv-section p,div,h3 {
+    font-size: 20px;
+}
+
+#serv-section > p {
+    padding-top: 8px;
+}
+
+.preços {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.preços div {
+    padding: 10px;
+    background-color: #001768;
+}
+
+.serv-img {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.serv-img img {
+    height: 200px;
+    width: 300px;
+    margin: 0 10px;
+}
+
+@media (max-width: 950px) {
+    .serv-img {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .serv-img img {
+        margin: 10px 0;
+    }    
+        
+}

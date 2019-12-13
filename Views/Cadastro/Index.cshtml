@@ -1,0 +1,46 @@
+    <main>
+        <h2> Cadastro </h2>
+
+        <form method="POST" action='@Url.Action("CadastrarCliente","Cadastro")'>
+            <section id="dados">
+                <div>
+                    <label for="nome"> Nome Completo</label>
+                    <input id="nome" type="text" name="nome" required/>
+                </div>
+
+                <div>
+                    <label for="cpf"> CPF</label>
+                    <input id="cpf" type="text" name="cpf" required/>
+                </div>
+
+                <div>
+                    <label for="telefone"> Telefone </label>
+                    <input id="telefone" type="text" name="telefone" required/>
+                </div>
+
+                <div>
+                    <label for="email"> E-mail </label>
+                    <input id="email" type="email" name="email" required/>
+                </div>
+
+                <div>
+                    <label for="empresa"> Empresa </label>
+                    <input id="empresa" type="text" name="empresa" required/>
+                </div>
+
+                <div>
+                    <label for="senha"> Senha </label>
+                    <input id="senha" type="password" name="senha" required/>
+                </div>
+
+                <div>
+                    <label for="confirmaSenha"> Confirmar Senha </label>
+                    <input id="confirmaSenha" type="password" name="confirmaSenha" required/>
+                </div>
+
+                <input type="submit" value="Finalizar" />
+
+            </section>
+        </form>
+
+    </main>

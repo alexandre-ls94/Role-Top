@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Rockwell', serif;
+    font-size: 35px;
+    padding: 20px 0;
+    color: #FFC600;
+}
+
+body {
+    font-family: 'Rockwell', serif;
+    background-color: #000000;
+}
+
+html {
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/*********NAV***********/
+nav {
+  padding: 2px 5px;
+  background-color: #FFC600;
+}
+
+nav #bt-mobile-menu {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 26px;
+}
+
+nav ul > li > a {
+  color: #7D0093;
+}
+
+nav ul > li > a:hover {
+  color: #000000;
+}
+
+
+nav a {
+  text-decoration: none;
+}
+/*********NAV***********/
+
+/*********RODAPÉ***********/
+
+footer {
+  background-color: #FFC600;
+  text-align: center;
+  font-size: 15px;
+  color: #7D0093;
+}
+
+footer > a {
+  padding: 5px;
+  text-decoration: none;
+  color: #7D0093;
+  background-color: #000000;
+}
+
+footer > a:hover {
+  color: #000000;
+  background-color: #FFC600;
+}
+
+#local {
+  padding-bottom: 10px;
+}
+
+address {
+  font-style: normal;
+  padding: 10px;
+}
+
+#redes-sociais {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px;
+}
+
+/*********RODAPÉ***********/
+
+
+@media (max-width: 790px) {
+    
+    nav ul{
+        display: flex;
+        justify-content: flex-start;
+        padding: 7px 7px;
+    }
+    
+    nav #bt-mobile-menu {
+        display: flex;
+    }
+    
+    nav .bt-common-menu {
+        display: none;
+        padding: 5px 0;
+    }
+    
+    nav .bt-common-menu.active {
+        display: block;
+    }
+    
+    nav ul.mobile-mode {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+/* Slideshow container */
+.gallery-container {
+    width: 90%;
+    position: relative;
+    margin: 10px 5px;
+    background: #333;
+    padding: 2px;
+  }
+    @media (min-width: 480px) {
+        .gallery-container {
+          width: 800px;
+          margin: auto;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .gallery-container {
+            width: 95%;
+        }
+    }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .imgslide {
+    width: 100%;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  @media (max-width: 768px) {
+    .numbertext {
+      top: 15px;
+    }
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

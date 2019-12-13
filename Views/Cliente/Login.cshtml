@@ -1,0 +1,27 @@
+    <main>
+        <div id="logo">
+            <img src="~/img/logo (1).png">
+        </div>
+        
+        <div id="formulario">
+            <h2> Login </h2>  
+
+            <form method="POST" action='@Url.Action("Login","Cliente")'>
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <br />
+                    <input id="email" type="email" name="email"/>
+                </div>
+                
+                <div>
+                    <label for="senha">Senha</label>
+                    <br />
+                    <input id="senha" type="password" name="senha"/>
+                </div>
+
+                    <input type="submit" value="Entrar" />
+            </form>
+            <a href='@Url.Action("Index","Cadastro")'>Cadastre-se</a>
+        </div>
+    </main>

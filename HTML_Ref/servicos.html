@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Role Top </title>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/secondary-pages.css" rel="stylesheet" type="text/css">
+    <link href="css/serviços.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="flex-container">
+    <header>
+        <nav>
+            <ul>
+                <li id="bt-mobile-menu">
+                    <!-- HTML para colocar os ícones do FA -->
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active">
+                        Home</a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="galeria.html"> Galeria </a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="servicos.html"> Serviços </a></li>
+                <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html"> Login </a></li>
+            </ul>
+        </nav>
+        <h1> Role Top </h1>
+    </header>
+    <main id="serv-section">
+        <h2> Serviços </h2>
+        <h3> Iluminação </h3>
+        <p> Equipamos seu evento com o melhor da iluminação. Pacotes de acordo com seu evento:</p>
+        <div class="preços">
+            <div>
+                <p> P </p>
+                <p>R$ 300,00 </p>
+            </div>
+            <div>
+                <p> M </p>
+                <p>R$ 600,00 </p>
+            </div>
+            <div>
+                <p> G </p>
+                <p>R$ 900,00 </p>
+            </div>
+        </div>
+
+        <h3> Som </h3>
+        <p> O som do seu evento merece a melhor qualidade. Pacotes: </p>
+        <div class="preços">
+            <div>
+                <p> P </p>
+                <p>R$ 400,00 </p>
+            </div>
+            <div>
+                <p> M </p>
+                <p>R$ 800,00 </p>
+            </div>
+            <div>
+                <p> G </p>
+                <p>R$ 1200,00 </p>
+            </div>
+        </div>
+
+        <h3> Limpeza </h3>
+        <p> Faça seu evento e não se preocupe com a limpeza. Pacotes: </p>
+        <div class="preços">
+            <div>
+                <p> P </p>
+                <p>R$ 300,00 </p>
+            </div>
+            <div>
+                <p> M </p>
+                <p>R$ 600,00 </p>
+            </div>
+            <div>
+                <p> G </p>
+                <p>R$ 900,00 </p>
+            </div>
+        </div>
+
+        <h3> Acessibilidade </h3>
+        <p>Nos preocupamos com a inclusão de todos ! O local é preparado para receber confortavelmente os deficientes
+            físicos e visuais.</p>
+        <div class="serv-img">
+            <img src="img/acessibilidade 1.jpeg" alt="Homem subindo rampa em cadeira de rodas">
+            <img src="img/acessibilidade 2.jpeg" alt="Cego sendo guiado por piso tatil">
+            <img src="img/acessibilidade 3.jpeg" alt="Rampa de acesso em porta">
+        </div>
+
+        <h3> Estacionamento </h3>
+        <p>Estamos conveniados ao estacionamento Carpark para melhor atende-los. Espaço amplo para a segurança do seu
+            carro.</p>
+        <div class="serv-img">
+            <img src="img/estacionamento 1.jpeg" alt="Estacionamento vazio">
+            <img src="img/estacionamento 2.jpeg" alt="Estacionamento cheio">
+            <img src="img/estacionamento 3.jpeg" alt="Estacionamento cheio 2">
+        </div>
+
+    </main>
+    <footer>
+        <address>
+            Av. Barão de Limeira, 135 - Santa Cecília - São Paulo - Sp
+            <br />
+            (11) 1234 5678 / (11) 9876 5432
+            <br />
+            roletop@email.com
+        </address>
+        <a href="#"> Voltar ao topo!</a>
+        <div id="redes-sociais">
+            <a href="https://www.facebook.com/"><img src="img/Facebook.png"></a>
+            <a href="https://www.instagram.com/"><img src="img/Instagram.png"></a>
+            <a href="https://twitter.com/"><img src="img/Twitter.png"></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-times");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }                
+    </script>
+
+</body>
+
+</html>

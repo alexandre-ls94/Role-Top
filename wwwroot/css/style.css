@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rockwell', serif;
+    font-size: 20px;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+section {
+    text-align: center;
+}
+
+section h2 {
+    padding: 15px;
+}
+
+section a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffc600;
+}
+
+.s-container {
+    width: 700px;
+    padding: 40px;
+    background-color: #001768; 
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+
+.s-container > h2 {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.s-container > p {
+    font-size: 25px;
+}
+
+/*********NAV***********/
+nav {
+    padding: 2px 5px;
+    background-color: #FFC600;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 26px;
+}
+
+nav ul > li > a {
+    color: #7D0093;
+}
+
+nav ul > li > a:hover {
+    color: #000000;
+}
+
+
+nav a {
+    text-decoration: none;
+}
+/*********NAV***********/
+
+/*********LOGO***********/
+
+#logo-area img {
+    width: 250px;
+}
+
+#logo-area {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/background-logo.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    padding: 15px;
+}
+/*********LOGO***********/
+
+/*********SOBRE***********/
+
+#sobre {
+    font-size: 25px;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+/*********SOBRE***********/
+
+/*********EVENTOS***********/
+
+#eventos {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+#eventos ol li {
+    display: flex;
+    list-style: none;
+    padding: 8px 0;
+}
+
+/*********EVENTOS***********/
+
+/*********SERVIÇOS***********/
+
+#serviços ul {
+    display: flex;
+	justify-content: space-around;
+    list-style-type: none;
+}
+
+#serviços ul li {
+    padding: 8px 0;
+}
+
+#serviços a {
+    color: #FFC600;
+}
+
+#serviços a:hover {
+    color: #7D0093;
+}
+/*********SERVIÇOS***********/
+
+/*********PERGUNTAS***********/
+#perguntas h2 {
+    display: flex;
+    align-self: center;
+    padding: 15px;
+    text-align: center;
+}
+
+#perguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15px 15px 15px;
+}
+
+#perguntas strong {
+    color: #7D0093;
+    padding-bottom: 15px;
+}
+
+#perguntas p {
+    padding-bottom: 15px;
+}
+/*********PERGUNTAS***********/
+
+/*********RODAPÉ***********/
+
+footer {
+    background-color: #FFC600;
+    text-align: center;
+    font-size: 15px;
+    color: #7D0093;
+}
+
+footer > a {
+    padding: 5px;
+    text-decoration: none;
+    color: #7D0093;
+    background-color: #000000;
+}
+
+footer > a:hover {
+    color: #000000;
+    background-color: #FFC600;
+}
+
+#local {
+    padding-bottom: 10px;
+}
+
+address {
+    font-style: normal;
+    padding: 10px;
+}
+
+#redes-sociais {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+}
+
+/*********RODAPÉ***********/
+
+@media (max-width: 790px) {
+
+    .s-container {
+        width: 90%;
+    }
+
+    #serviços {
+        height: 100%;
+        align-content: center;
+    }
+
+    
+    nav ul{
+        display: flex;
+        justify-content: flex-start;
+        padding: 7px 7px;
+    }
+    
+    nav #bt-mobile-menu {
+        display: flex;
+    }
+    
+    nav .bt-common-menu {
+        display: none;
+        padding: 5px 0;
+    }
+    
+    nav .bt-common-menu.active {
+        display: block;
+    }
+    
+    nav ul.mobile-mode {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 490px) {
+    main > a {
+        font-size: 23px;
+    }
+
+    #serviços ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width: 380px) {
+    main > a {
+        font-size: 20px;
+    }
+
+}

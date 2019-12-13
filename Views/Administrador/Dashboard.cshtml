@@ -1,0 +1,83 @@
+@model RoleTopMVC.ViewModels.DashboardViewModel
+
+    <main>
+        <h2> Dashboard </h2>
+
+        <div id="pedidos">
+            <table id="parte1">
+                <thead>
+                    <tr>
+                        <th> Contratante </th>
+                        <th> Telefone </th>
+                        <th> E-mail </th>
+                        <th> Empresa </th>
+                        <th> Público Estimado </th>
+                        <th> Tipo de Evento </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var evento in Model.Eventos)
+                    {
+                        <tr>
+                            <td> @evento.Cliente.Nome </td>
+                            <td> @evento.Cliente.Telefone </td>
+                            <td> @evento.Cliente.Email</td>
+                            <td> @evento.Cliente.Empresa</td>
+                            <td> @evento.Publico</td>
+                            <td> @evento.TipoEvento</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <table id="parte2">
+                <thead>
+                    <tr>
+                        <th> Data de Início </th>
+                        <th> Data de Término </th>
+                        <th> Iluminação </th>
+                        <th> Som </th>
+                        <th> Limpeza </th>
+                        <th> Valor da Locação</th>
+                        <th> Aceitar </th>
+                        <th> Recusar </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var evento in Model.Eventos)
+                    {
+                        <tr>
+                            <td> @evento.DataInicio</td>
+                            <td> @evento.DataTermino</td>
+                            <td> @evento.Iluminacao</td>
+                            <td> @evento.Som</td>
+                            <td> @evento.Limpeza </td>
+                            <td> 2500,00 </td>
+                            <td><a href='@Url.Action("Aprovar", "Evento", new {id = @evento.Id})'><i class="fas fa-check"></i></a></td>
+                            <td><a href='@Url.Action("Reprovar", "Evento", new {id = @evento.Id})'><i class="fas fa-times"></i></a></td>
+                        </tr>                        
+                    }                    
+                </tbody>
+            </table>
+        </div>
+
+        <section id="status">
+            <div id="aprovados">
+                <h3> Aprovados</h3>
+                <p> @Model.EventosAprovados </p>
+            </div>
+
+            <div id="reprovados">
+                <h3> Reprovados </h3>
+                <p> @Model.EventosReprovados </p>
+            </div>
+
+            <div id="pendentes">
+                <h3> Pendentes </h3>
+                <p> @Model.EventosPendentes </p>
+            </div>
+        </section>
+
+        <p>Eventos atualizados em @DateTime.Now</p>
+
+    </main>

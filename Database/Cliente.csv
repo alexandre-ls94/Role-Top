@@ -1,0 +1,3 @@
+tipo_usuario=0;nome=Admin;cpf=000000;telefone=11111111111;email=admin@email.com;empresa=123;senha=admin
+tipo_usuario=1;nome=Fulano;cpf=000000;telefone=11111111111;email=fulano@email.com;empresa=123;senha=123123
+tipo_usuario=1;nome=Ciclano;cpf=000000;telefone=11111111111;email=ciclano@email.com;empresa=123;senha=123123

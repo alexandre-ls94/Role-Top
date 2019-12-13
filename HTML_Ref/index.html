@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Role Top</title>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="section-container">
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <!-- HTML para colocar os ícones do FA -->
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active"> Home
+                        </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="galeria.html"> Galeria </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="servicos.html"> Serviços </a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html"> Login </a></li>
+                </ul>
+            </div>
+            <h1> Role Top </h1>
+        </nav>
+
+        <section id="logo-area">
+            <div class="section-container">
+                <h1> Role Top</h1>
+                <img src="img/logo (1).png" title="Logo">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div id="sobre">
+            <p>Desde 2010, o Rolê Top vem trazendo as melhores festas e eventos a seu público e vem sendo sucesso entre
+                todos.
+                Baladas, casamentos, apresentações, entre outros eventos com muita qualidade, segurança e diversão.</p>
+        </div>
+
+        <section id="eventos">
+            <h2> Eventos </h2>
+            <ol>
+                <li>16/08 - Sextanejo - das 21 horas as 03 horas</li>
+                <li>17/08 - White Party (Balada eletrônica) - das 21 horas as 04 horas</li>
+                <li>18/08 - Casamento - Evento fechado</li>
+                <li>22/08 - Apresentação - Evento fechado</li>
+                <li>23/08 - Sextanejo - das 21 horas as 03 horas</li>
+                <li>24/08 - Casamento - Evento fechado</li>
+            </ol>
+        </section>
+
+        <section id="serviços">
+            <h2> Serviços </h2>
+            <ul>
+                <li><a href="servicos.html"> Iluminação </a></li>
+                <li><a href="servicos.html"> Som </a></li>
+                <li><a href="serviços.html"> Limpeza </a></li>
+                <li><a href="serviços.html"> Estacionamento </a></li>
+                <li><a href="serviços.html"> Acessibilidade </a></li>
+            </ul>
+        </section>
+
+
+        <section id="perguntas">
+            <h2> Perguntas Frequentes </h2>
+
+            <strong>Onde estaciono meu veículo ?</strong>
+            <p>Somos conveniados ao estacionamento Carpark, que tem um amplo espaço dedicado a seu veículo.</p>
+            <strong>Sou deficiente, tenho acesso livre ?</strong>
+            <p>O local está preparado para receber deficientes visuais e físicos, com rampas de acesso e piso tátil.</p>
+            <strong>É permitido a entrada de menores de idade ?</strong>
+            <p>O local recebe vários tipos de eventos, por isso é recomendável que seja verificado a faixa etária de
+                acordo com o evento.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <address>
+            Av. Barão de Limeira, 539 - Santa Cecília - São Paulo - Sp
+            <br />
+            (11) 1234 5678 / (11) 9876 5432
+            <br />
+            roletop@email.com
+        </address>
+        <div id="local">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8869961505543!2d-46.648477085071065!3d-23.53656648469522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x124f377d06c7e71f!2sAlameda+Bar%C3%A3o+de+Limeira%2C+539+-+Campos+El%C3%ADseos%2C+S%C3%A3o+Paulo+-+SP%2C+01202-001!5e0!3m2!1sen!2sbr!4v1550223658410"
+                width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <a href="#"> Voltar ao topo!</a>
+        <div id="redes-sociais">
+            <a href="https://www.facebook.com/"><img src="img/Facebook.png"></a>
+            <a href="https://www.instagram.com/"><img src="img/Instagram.png"></a>
+            <a href="https://twitter.com/"><img src="img/Twitter.png"></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-times");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }                
+    </script>
+
+</body>
+
+</html>

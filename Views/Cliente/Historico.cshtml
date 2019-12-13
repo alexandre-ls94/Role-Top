@@ -1,0 +1,61 @@
+@model RoleTopMVC.ViewModels.HistoricoViewModel
+
+    <main>
+        <h2> Histórico </h2>
+
+        <div id="pedidos">
+            <table id="parte1">
+                <thead>
+                    <tr>
+                        <th> Nome </th>
+                        <th> Telefone </th>
+                        <th> E-mail </th>
+                        <th> Empresa </th>
+                        <th> Público Estimado </th>
+                        <th> Tipo de Evento </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var evento in Model.Eventos)
+                    {
+                        <tr>
+                            <td> @evento.Cliente.Nome </td>
+                            <td> @evento.Cliente.Telefone </td>
+                            <td> @evento.Cliente.Email</td>
+                            <td> @evento.Cliente.Empresa</td>
+                            <td> @evento.Publico</td>
+                            <td> @evento.TipoEvento</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <table id="parte2">
+                <thead>
+                    <tr>
+                        <th> Data de Início </th>
+                        <th> Data de Término </th>
+                        <th> Iluminação </th>
+                        <th> Som </th>
+                        <th> Limpeza </th>
+                        <th> Valor da Locação</th>
+                        <th> Status </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var evento in Model.Eventos)
+                    {
+                        <tr>
+                            <td> @evento.DataInicio</td>
+                            <td> @evento.DataTermino</td>
+                            <td> @evento.Iluminacao</td>
+                            <td> @evento.Som</td>
+                            <td> @evento.Limpeza </td>
+                            <td> 2500,00 </td>
+                            <td> @evento.StatusString</td>
+                        </tr>                        
+                    }                    
+                </tbody>
+            </table>
+        </div>
+    </main>
